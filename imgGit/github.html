@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; utf-8">
+<html>
+<head>
+
+  <title>GITHUB </title>
+    <link href="dibujo.css" rel="stylesheet" type="text/css"   title="Color" />
+
+</head>
+
+<body>
+<div id="contenedor">
+
+
+    <header style="margin-bottom:30px;">
+        <a href="wikiblog.html"><img class="logo" src="imagenes/logo.png" href="wikiblog.html";"></a>
+      
+      <h1>	WIKIBLOG	 </h1>		
+      </font>
+    	</header>
+
+
+
+<div style="color:black; text-align: center; "> 
+
+  <a href="proxmox.html" style=" border: 1px solid black; border-radius: 5px; padding:5px; background: black; color:white; text-decoration:none;"  >PROXMOX</a>
+  <a href="config.html" style="margin-left:5%; border: 1px solid black; border-radius: 5px; padding:5px;background: black; color:white; text-decoration:none;">CONFIGURACION MAQUINA</a>
+  <a href="github.html"style="margin-left:5%; border: 1px solid #717D7E; border-radius: 5px; padding:5px;background: #717D7E; color:white; text-decoration:none;">GITHUB</a>
+  <a href="wiki.html" style="margin-left:5%; border: 1px solid black; border-radius: 5px; padding:5px;background: black; color:white; text-decoration:none;">WIKI</a><br><br><br><br>
+</div>
+
+
+  <p>El primer paso es la instalacion del github, para ello escribimos en el terminal como root, 
+sudo apt-get install git</p>
+<img class="github" src="imagenes/instalacion.png" href="";>
+
+<br>
+
+
+
+<p>
+Seguidamente vincularemos nuestro a GIT, para ello escribiremos en el terminal el comando, git config --global user.email"julenlodeiro@gmail.com"
+</p> 
+<img class="github" src="imagenes/instalacion.png" href="";>
+ <p>
+Al tener vinculado nuestro GIT,iniciamos y crearemos un repositorio dentro del directorio de trabajo
+</p>
+<img class="github" src="imagenes/vincular_correo.png" href="";>
+<p>Realizamos la primera copia, con el comando git add .
+  Con especial atención en dejar un espacio después del add
+</p>
+<img class="github" src="imagenes/instalacion.png" href="";>
+<p>
+  Consolidamos la copia con el comando
+  git commit -m "primera consolidacion"
+</p>
+<img class="github" src="imagenes/consolidacion.png" href="";>
+
+
+<p>
+  Si queremos conocer el registro de consolidaciones que tenemos en el repositorio,
+  escribiremos git log
+</p>
+<img class="github" src="imagenes/contenido_repo.png" href="";>
+<p>
+Si queremos conocer el estado de git, por si tenemos que hacer un " add " o una consolidacion nueva
+
+git status
+
+</p>
+<img class="github" src="imagenes/consolidacion.png" href="";>
+<h3>ALTA EN GIT HUB</h3>
+
+<p>El siguiente paso es la instalación del GitHub, para ello tecleamos
+sudo apt-get install gith
+</p>
+<img class="github" src="imagenes/instalacion.png" href="";>
+<p>
+  Vinculacamos a nuestro git el nuevo directorio de trabajo
+
+  git remote add origin HTTPS:\\-----------
+</p>
+<img class="github" src="imagenes/vincular_correo.png" href="";>
+<p>Transladamos el proyecto de Git a GitHub
+  git push -u origin master
+</p> 
+<img class="github" src="imagenes/git_a_github.png" href="";>
+<p> Si deseamos recuperar un proyecto de GitHub
+
+  git clone HTTPS:\\---------------
+</p>
+<img class="github" src="imagenes/clone.png" href="";>
+<p>Pasar a GitHub modificaciones
+
+  git push
+</p>
+<img class="github" src="imagenes/instalacion.png" href="";>
+<p> Traer las modificaciones de otros compañeros, hecho el clone anteriormente
+git pull</p>
+<img class="github" src="imagenes/clone.png" href="";>
+
+
+
+
+
+<footer>
+
+
+</footer>
+
+</div>
+</body>
+
+
+</html>

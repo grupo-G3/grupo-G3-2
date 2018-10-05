@@ -1,0 +1,107 @@
+body { 
+  background-color: #717D7E;
+  font-family: sans-serif; 
+  padding-top: 0 20px;
+}
+h1 { 
+  margin: 10px;
+  font-size: 140%;
+  text-align: center; 
+  text-transform: uppercase; 
+}
+
+#contenedor
+{
+	background-color: #F2F3F4 ;
+	height: 100%;
+	border: 2px solid #FFF0F5;
+	position:relative;
+	width:60%;
+	margin: 0 auto;
+	padding: 10px;
+    
+}
+
+
+
+
+}
+header
+{
+	background-color: #717D7E;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+	border-radius: 4px;
+	text-align: center;
+	width: 100%;
+  height: auto;
+  
+	
+}
+fieldset { 
+  background-color: #717D7E;
+  border: #717D7E 3px solid; 
+  padding: 20px 20px 20px;
+} 
+legend { 
+  background-color: #F2F3F4 ;
+  border: #717D7E 3px solid; 
+  font-size: 120%; 
+  padding: 0px 10px; 
+  color:#717D7E;
+  
+}
+address{
+	color:#717D7E;
+}
+
+p{
+  margin: 80px 100px 10px 50px;
+}
+
+.github{
+    width: 500px;
+    height: 250px;
+    position: center;
+    margin:  50px 300px;
+
+}
+
+
+
+footer{
+
+bottom: 0;
+position:absolute;
+
+
+
+}
+
+
+.scale-up-center { 
+   width: 18% ;
+	-webkit-animation: scale-up-center 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s ;
+	        animation: scale-up-center 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s ;
+}
+
+
+ @-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}

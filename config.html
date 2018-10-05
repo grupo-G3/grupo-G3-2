@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CONFIG </title>
+  <link href="dibujo.css" rel="stylesheet" type="text/css"  title="Color" />
+  
+</head>
+
+<body>
+<nav id="contenedor">
+
+
+    <header style="margin-bottom:30px;">
+        <a href="proxmox.html"><img class="github" src="logo.png" href="wikiblog.html";></a>
+      <h1>  
+        WIKIBLOG  
+      </h1>   
+    </header>
+
+
+
+<nav style="color:black; text-align: center; "> 
+
+  <a href="proxmox.html" style="border: 1px solid black; border-radius: 5px; padding:5px; background: black; color:white; text-decoration:none;" >PROXMOX</a>
+  <a href="config.html" style="margin-left:5%; border: 1px solid #717D7E; border-radius: 5px; padding:5px;background: #717D7E; color:white; text-decoration:none;">CONFIGURACION MAQUINA</a>
+  <a href="github.html" style="margin-left:5%; border: 1px solid black; border-radius: 5px; padding:5px;background: black; color:white; text-decoration:none;">GITHUB</a>
+ <br><br><br><br>
+</nav>
+
+<section>
+
+  <h5>
+    En este apartado explicamos como se instala y configura un contenedor una vez instalado el proxmox, con el objetivo de almacenar todos los archivos correspondientes a nuestra página 
+    en el mismo.
+  </h5>
+
+  <hr>
+
+  <div id="contenido">
+
+      <p>
+        Tras haber instalado el proxmox lo primero que debemos hacer es acceder al mismo. Para ello primero hay que activar el servidor lampp a través de la terminal.
+        Para ello debemos acceder a la terminal, y después introducir el comando "/opt/lampp/lampp start", haciendo que se inicialice el apache2, el mysql y el php.
+      </p>
+
+  <img class="github" src="imagenes/AccesoProxmox.png" >
+
+      <p>  
+        Una vez activado todo debemos introducir lo siguiente en el apartado de las Url: https://(dirección ip):8006 (En nuestro caso la ip es 10.9.53.111), y accederemos a la página del proxmox.
+        <img src="">
+      </p>
+
+  </div>
+
+      <p>
+        Dentro de la página nuestra intención es la de crear un contenedor donde se almacenará todos los datos sobre el blog, y para ello necesitamos una plantilla, así que lo primero que debemos
+        hacer es descargar una plantilla.
+
+        Para ello debemos acceder al shell del proxmox situado donde mostramos en la imagen, y una vez dentro tecleamos en la terminal "pveam update" para actualizar las plantillas, y seguido 
+        "pveam available" para ver las plantillas disponibles para descarga. Escogemos la plantilla a descargar e introducimos el comando "pveam download local (nombre de la plantilla a descargar)"
+      </p>
+
+      <p>
+        Ahora toca instalar el contenedor. Hay un botón arriba a mano derecha en el que pone "Crear CT". Lo pulsamos.
+        <img class="github" src="imagenes/PantallaPrincipal.png">
+
+        Aparecerá una ventana llamada general con información a rellenar para la instalación. Nosotros rellenaremos los apartados de nodo, CT y contraseña, el resto no lo necesitamos.
+        <img class="github" src="imagenes/GeneralContenedor.png">
+
+        En la ventana de plantilla omitimos el almacenamiento y como plantilla seleccionamos la que acabamos de descargar en el apartado anterior.
+
+        En la siguiente parte como tamaño de disco ponemos 16 y seguimos para adelante.
+        <img class="github" src="imagenes/DiscoContenedor.png">
+
+        En la CPU pondremos dos nucleos, aunque no es determinante para lo que vamos a hacer una vez instalada la maquina.
+        <img class="github" src="imagenes/CpuContenedor.png">
+
+        En la memoria ponemos 8000 en ambos apartados y continuamos.
+        <img class="github" src="imagenes/MemoriaContenedor.png">
+
+        Y aquí aparece un apartado de suma importancia para llevar a cabo el reto del blog, el de redes. Debemos introducir la ip a utilizar en el contenedor y la puerta de enlaze.
+        Nosotros utilizaremos la ip 10.9.52.106/23 y la puerta de enlace 10.9.52.100.
+        <img class="github" src="imagenes/RedesContenedor.png">
+
+        El DNS lo omitimos, no lo necesitaremos.
+        <img class="github" src="imagenes/DniContenedor.png">
+
+        Y por último aparece una ventana de confirmación con todos los datos que hemos introducido, donde decidiremos si queremos en efecto realizar la instalación o no, donde seleccionaremos
+        "Finalizado".
+        <img class="github" src="imagenes/ConfirmacionContenedor.png">
+      </p>
+
+      <p>
+        El contenedor ya está instalado, ahora toca configurar las herramientas que necesitaremos utilizar.
+        
+        Primero instalaremos las net-tools, para poder hacer uso del comando "ifconfig", por ejemplo.
+        <img class="github" src="imagenes/PantallaPrincipal.png">
+
+        Acto seguido confirmaremos que la red que estamos usando es la correcta.
+        <img class="github" src="imagenes/PantallaPrincipal.png">
+
+
+      </p>
+  </div>
+
+</section>
+
+
+
+
+<footer>
+
+
+</footer>
+
+</div>
+</body>
+
+
+</html>
